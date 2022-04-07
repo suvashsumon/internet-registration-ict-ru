@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use PhpParser\Node\Expr\FuncCall;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home',function(){
+    return redirect('/admin');
+})->name('home');
+
+Route::prefix('admin')->group(function () {
+    Route::get('/users',function(){
+        return view('vendor.index');
+    })->name('users.index');
+});
