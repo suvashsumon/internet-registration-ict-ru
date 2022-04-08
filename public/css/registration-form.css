@@ -1,0 +1,30 @@
+.main-body {
+    background-color: #F0F0F0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputfield {
+    border: 0;
+    border-bottom: 1px solid blueviolet;
+    border-radius: 0px;
+}
+
+.inputfield:focus {
+    border-color: green
+}
+
+.form-card {
+    border-radius: 20px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+label {
+    font-weight: bold;
+}
+
+.fm-group-custom {
+    padding-top: 10px;
+}

@@ -16,7 +16,7 @@ use PhpParser\Node\Expr\FuncCall;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.users.registration');
 });
 
 Auth::routes();
