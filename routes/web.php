@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('layouts.users.registration');
 });
 
+
 Auth::routes();
 
 Route::get('/home',function(){
