@@ -19,6 +19,7 @@ class Registration extends Model
         'email',
         'mobile_no',
         'building_no',
-        'room_flat_no'
+        'room_flat_no',
+        'status'
     ];
 }

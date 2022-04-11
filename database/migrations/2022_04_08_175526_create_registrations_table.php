@@ -25,6 +25,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('mobile_no');
             $table->string('building_no');
             $table->string('room_flat_no');
+            $table->integer('status')->default(0); // 0 -> pending, 1 -> approved, 2 -> deleted
             $table->timestamps();
         });
     }
