@@ -19,7 +19,7 @@
                 <td>{{ $item->email }}</td>
                 <td>{{ $item->mobile_no }}</td>
                 <td>
-                    <a href="" class="btn btn-primary btn-sm">View</a>
+                    <a href="{{ route("requests.getInformation", $item->id) }}" class="btn btn-primary btn-sm">View</a>
                     <a href="" class="btn btn-warning btn-sm">edit</a>
                     <a href="" class="btn btn-danger btn-sm">Delete</a>
                 </td>

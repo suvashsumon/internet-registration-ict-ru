@@ -41,4 +41,10 @@ class RequestsController extends Controller
         $data->save();
         return redirect()->route('requests.index');
     }
+    public function getInformation($id)
+    {
+        $data = Registration::find($id);
+        //return $data;
+        return view("admin::requests.view_request_info", ["info"=>$data]);
+    }
 }

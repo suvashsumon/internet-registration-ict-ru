@@ -32,4 +32,5 @@ Route::prefix('admin')->group(function () {
     Route::get('/requests/deleted_users',[RequestsController::class,'deletedUsers'])->name('requests.deleted.users');
     Route::get('/requests/approve/{id}',[RequestsController::class,'approve'])->name('requests.approve');
     Route::get('/requests/cancel/{id}',[RequestsController::class,'cancel'])->name('requests.cancel');
+    Route::get('/requests/information/{id}',[RequestsController::class,'getInformation'])->name('requests.getInformation');
 });
