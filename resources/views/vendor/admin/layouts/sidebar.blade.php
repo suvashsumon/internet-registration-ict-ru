@@ -11,11 +11,25 @@
                         <span class="hide-menu">{{ __('Home') }}</span>
                     </a>
                 </li>
-                <li class="sidebar-item @isActive(getRouteName().'users', 'selected')">
-                    <a class="sidebar-link @isActive(getRouteName().'users', 'active') " href="{{ route('users.index') }}" aria-expanded="false">
+
+                <li class="sidebar-item @isActive(getRouteName(), 'selected')">
+                    <a class="sidebar-link @isActive(getRouteName(), 'active') " href="{{ route('requests.users') }}" aria-expanded="false">
                         <span class="hide-menu">Users</span>
                     </a>
                 </li>
+                
+                <li class="sidebar-item @isActive(getRouteName(), 'selected')">
+                    <a class="sidebar-link @isActive(getRouteName(), 'active') " href="{{ route('requests.index') }}" aria-expanded="false">
+                        <span class="hide-menu">Pending Requests</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item @isActive(getRouteName(), 'selected')">
+                    <a class="sidebar-link @isActive(getRouteName(), 'active') " href="{{ route('requests.deleted.users') }}" aria-expanded="false">
+                        <span class="hide-menu">Canceled Requests</span>
+                    </a>
+                </li>
+
 
                 {{-- @include('admin::layouts.child-sidebar-menu') --}}
 

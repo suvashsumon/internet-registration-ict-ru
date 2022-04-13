@@ -10,10 +10,10 @@
 <div class="container mt-5 mb-5">
         <div class="card shadow form-card pr-3 pl-3 pb-4">
             <div class="h3 mt-5 mb-3 text-center card-title">Registration: Please enter your information</div>
-            <form class="card-body">
+            <form class="card-body" method="POST" action="">
                 <div class="form-group fm-group-custom">
                     <label for="residentialSelection">Select User Type (Residential or Dormatory):</label>
-                    <select class="form-control form-control-sm inputfield" id="residentialSelection">
+                    <select class="form-control form-control-sm inputfield" id="residentialSelection" name="user_type">
                         <option value="">Select</option>
                         <option value="Dormitory">Student (M.Phil Fellow/ PhD Fellow/ International Student)</option>
                         <option value="Residential">Employee (Teacher/Officer)</option>
@@ -22,52 +22,54 @@
                 <div class="form-group fm-group-custom">
                     <label for="identityNo">Internet ID/ Salary ID (8 digit)/Student ID:</label>
                     <input type="text" class="form-control form-control-sm inputfield" id="identityNo"
-                        placeholder="">
+                        placeholder="" name="indentity_no">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="newPassword">New password:</label>
                         <input type="password" class="form-control form-control-sm inputfield"
-                            id="newPassword" placeholder="">
+                            id="newPassword" placeholder="" name="password">
                     </div>
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="confirmPassword">Confirm new password:</label>
                         <input type="password" class="form-control form-control-sm inputfield"
-                            id="confirmPassword" placeholder="">
+                            id="confirmPassword" placeholder="" name="confirm_password">
                     </div>
                 </div>
                 <div class="form-group fm-group-custom">
                     <label for="name">Your Name:</label>
                     <input type="text" class="form-control form-control-sm inputfield" id="name"
-                        placeholder="">
+                        placeholder="" name="name ">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="designation">Designation:</label>
                         <input type="text" class="form-control form-control-sm inputfield" id="designation"
-                            placeholder="">
+                            placeholder="" name="designation">
                     </div>
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="department">Department:</label>
                         <input type="text" class="form-control form-control-sm inputfield" id="department"
-                            placeholder="">
+                            placeholder="" name="department">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="emailId">Email ID:</label>
-                        <input type="email" class="form-control form-control-sm inputfield" id="emailId" placeholder="">
+                        <input type="email" class="form-control form-control-sm inputfield" id="emailId" placeholder=""
+                        name="email"
+                        >
                     </div>
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="mobileNo">Mobile No.:</label>
                         <input type="text" class="form-control form-control-sm inputfield" id="mobileNo"
-                            placeholder="">
+                            placeholder="" name="phone">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="bulidingNo">Building Name or Number:</label>
-                        <select class="form-control form-control-sm inputfield" id="bulidingNo">
+                        <select class="form-control form-control-sm inputfield" id="bulidingNo" name="building_no">
                             <option value="">--SELECT Building Name--</option>
                             <option value='BKZH'>BKZH </option>
                             <option value='E-01'>E-01 </option>
@@ -147,10 +149,10 @@
                     <div class="form-group col-md-6 fm-group-custom">
                         <label for="roomNo">Room or Flat No:</label>
                         <input type="text" class="form-control form-control-sm inputfield" id="roomNo"
-                            placeholder="">
+                            placeholder="" name="room_no">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="submit" class="btn btn-primary" value="Submit">
             </form>
         </div>
     </div>

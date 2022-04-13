@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RequestsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\FuncCall;
@@ -25,9 +26,10 @@ Auth::routes();
 Route::get('/home',function(){
     return redirect('/admin');
 })->name('home');
-
 Route::prefix('admin')->group(function () {
-    Route::get('/users',function(){
-        return view('vendor.index');
-    })->name('users.index');
+    Route::get('/requests',[RequestsController::class,'index'])->name('requests.index');
+    Route::get('/requests/users',[RequestsController::class,'users'])->name('requests.users');
+    Route::get('/requests/deleted_users',[RequestsController::class,'deletedUsers'])->name('requests.deleted.users');
+    Route::get('/requests/approve/{id}',[RequestsController::class,'approve'])->name('requests.approve');
+    Route::get('/requests/cancel/{id}',[RequestsController::class,'cancel'])->name('requests.cancel');
 });
